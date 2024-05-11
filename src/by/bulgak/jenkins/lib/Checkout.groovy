@@ -10,7 +10,7 @@ def checkout(String repo,
             branches: [[name: "${branch}"]], 
             doGenerateSubmoduleConfigurations: false, 
             userRemoteConfigs: [[
-                credentialsId: "${GITHUB_CREDENTIALS_ID}", 
+                credentialsId: "", 
                 url: "${repo}"
             ]]
         ])
