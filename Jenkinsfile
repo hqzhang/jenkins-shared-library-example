@@ -12,7 +12,7 @@ node {
 	)
     stage("Checkout class"){
         echo "STAGE: Checkout Class"
-        lib.by.bulgak.jenkins.lib.Checkout.new().checkout(
+        lib.com.wavecloud.shlib.Checkout.new().checkout(
             "https://github.com/hqzhang/jenkins-shared-library-example.git",
             "master"
         );
@@ -20,7 +20,7 @@ node {
 
     stage("Maven builder"){
         echo "STAGE: Maven builder"
-        def mavenLib = lib.by.bulgak.jenkins.lib
+        def mavenLib = lib.com.wavecloud.shlib
         def mvn = mavenLib.Maven.builder(this)
             .action("clean install")
             .argument(mavenLib.MavenArgument.create().withPrefix("-D").withKey("key").withName("value").build())
