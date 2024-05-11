@@ -12,7 +12,7 @@ node {
 	)
     stage("Checkout class"){
         lib.by.bulgak.jenkins.lib.Checkout.new().checkout(
-            "git@github.com:aleksei-bulgak/jenkins-shared-library-example.git",
+            "git@github.com:hqzhang/jenkins-shared-library-example.git",
             "master"
         );
     }
