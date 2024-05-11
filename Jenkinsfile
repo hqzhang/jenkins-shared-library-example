@@ -11,6 +11,7 @@ node {
 			])
 	)
     stage("Checkout class"){
+        echo "STAGE: Checkout Class"
         lib.by.bulgak.jenkins.lib.Checkout.new().checkout(
             "git@github.com:hqzhang/jenkins-shared-library-example.git",
             "master"
@@ -18,6 +19,7 @@ node {
     }
 
     stage("Maven builder"){
+        echo "STAGE: Maven builder"
         def mavenLib = lib.by.bulgak.jenkins.lib
         def mvn = mavenLib.Maven.builder(this)
             .action("clean install")
