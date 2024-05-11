@@ -1,4 +1,4 @@
-package by.bulgak.jenkins.lib;
+package com.wavecloud.shlib;
 
 import static Constants.GITHUB_CREDENTIALS_ID;
 
